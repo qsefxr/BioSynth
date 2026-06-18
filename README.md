@@ -2,7 +2,7 @@
 
 An immersive, high-performance interactive web ecosystem built with pure HTML5, advanced CSS3, and heavy Vanilla JavaScript (ES6+). The project explores the concept of a mystical night forest using a strict dark/purple/neon-green color palette.
 
-[Live Demo Link](https://your-github-username.github.io/repository-name/)
+[Live Demo Link](https://qsefxr.github.io/BioSynth/)
 
 ## 🌟 Key Features
 
