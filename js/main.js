@@ -374,8 +374,7 @@ class UIManager {
     });
 
     this.hamburger.addEventListener("click", () => {
-      this.nav.style.display =
-        this.nav.style.display === "block" ? "none" : "block";
+      this.nav.classList.toggle("active");
     });
   }
 
