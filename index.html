@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mystic Luminescent Nature</title>
+    <meta
+      name="description"
+      content="Explore the mystic luminescent flora and fauna in a neon-organic ecosystem."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="custom-cursor" id="custom-cursor"></div>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <header class="header" id="header">
+      <div class="header__container">
+        <div class="logo">
+          <svg
+            class="logo__icon"
+            viewBox="0 0 100 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 10 L60 40 L90 50 L60 60 L50 90 L40 60 L10 50 L40 40 Z"
+              fill="var(--color-primary)"
+              class="logo__glow"
+            />
+          </svg>
+          <span class="logo__text">LumiNature</span>
+        </div>
+
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="#hero" class="nav__link interactive">Home</a></li>
+            <li>
+              <a href="#explore" class="nav__link interactive">Explore</a>
+            </li>
+            <li>
+              <a href="#dashboard" class="nav__link interactive">Dashboard</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__controls">
+          <button id="toggle-state" class="btn btn--outline interactive">
+            Night Mode
+          </button>
+          <div class="hamburger interactive" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero fade-in-section">
+        <div class="hero__content">
+          <h1 class="hero__title glow-text" id="hero-title">
+            Discover The <br />
+            <span class="highlight">Glowing Ecosystem</span>
+          </h1>
+          <p class="hero__subtitle">
+            Immerse yourself in a dynamic, bio-luminescent world where every
+            interaction breathes life into the environment.
+          </p>
+          <a href="#explore" class="btn btn--primary interactive">Dive In</a>
+        </div>
+      </section>
+
+      <section id="explore" class="explore fade-in-section">
+        <div class="container">
+          <h2 class="section-title glow-text">Mystic Flora & Fauna</h2>
+          <div class="filters">
+            <button class="filter-btn active interactive" data-filter="all">
+              All
+            </button>
+            <button class="filter-btn interactive" data-filter="flora">
+              Flora
+            </button>
+            <button class="filter-btn interactive" data-filter="fauna">
+              Fauna
+            </button>
+          </div>
+          <div class="grid" id="explore-grid"></div>
+        </div>
+      </section>
+
+      <section id="dashboard" class="dashboard fade-in-section">
+        <div class="container">
+          <h2 class="section-title glow-text">Ecosystem Control</h2>
+          <div class="dashboard__panel glass-panel">
+            <div class="control-group">
+              <label for="glow-intensity" class="control-label"
+                >Bio-luminescence Intensity (<span id="glow-val">50</span
+                >%)</label
+              >
+              <input
+                type="range"
+                id="glow-intensity"
+                class="slider interactive"
+                min="0"
+                max="100"
+                value="50"
+              />
+            </div>
+            <div class="control-group">
+              <label for="particle-speed" class="control-label"
+                >Energy Flow Speed (<span id="speed-val">3</span>x)</label
+              >
+              <input
+                type="range"
+                id="particle-speed"
+                class="slider interactive"
+                min="1"
+                max="10"
+                value="3"
+              />
+            </div>
+            <div class="control-group">
+              <label for="particle-density" class="control-label"
+                >Spore Density (<span id="density-val">100</span>)</label
+              >
+              <input
+                type="range"
+                id="particle-density"
+                class="slider interactive"
+                min="10"
+                max="200"
+                value="100"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal-overlay" id="modal">
+      <div class="modal-content glass-panel">
+        <button class="modal-close interactive" id="modal-close">
+          &times;
+        </button>
+        <div class="modal-body" id="modal-body"></div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
